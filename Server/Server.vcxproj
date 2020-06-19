@@ -130,16 +130,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Alloctor.cpp" />
     <ClCompile Include="CellTask.hpp" />
     <ClCompile Include="server.cpp" />
     <ClCompile Include="TcpServer.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Alloctor.cpp" />
     <ClInclude Include="Alloctor.h" />
     <ClInclude Include="CellTimeStamp.hpp" />
     <ClInclude Include="MemoryMgr.hpp" />
     <ClInclude Include="MessageHeader.hpp" />
+    <ClInclude Include="Pointer.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

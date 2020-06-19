@@ -72,6 +72,7 @@ int main()
 	server.Listen(5);
 	//开启线程数量
 	server.start(4);
+	auto p1 = new int();
 	while (server.isRun())
 	{
 		server.onRun();

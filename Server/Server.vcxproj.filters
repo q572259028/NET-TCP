@@ -18,10 +18,13 @@
     <ClCompile Include="server.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="TcpServer.hpp">
+    <ClCompile Include="CellTask.hpp">
       <Filter>头文件</Filter>
     </ClCompile>
-    <ClCompile Include="CellTask.hpp">
+    <ClCompile Include="Alloctor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpServer.hpp">
       <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,13 +35,13 @@
     <ClInclude Include="CellTimeStamp.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Alloctor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="MemoryMgr.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Alloctor.cpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Alloctor.h">
+    <ClInclude Include="Pointer.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -7,6 +7,7 @@
 #include <mutex>
 #include <map>
 #include <atomic>
+#include "Alloctor.h"
 #include "MessageHeader.hpp"
 #include "CellTimeStamp.hpp"
 #include "CellTask.hpp"
