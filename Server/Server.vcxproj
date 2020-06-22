@@ -140,7 +140,6 @@
     <ClInclude Include="CellTimeStamp.hpp" />
     <ClInclude Include="MemoryMgr.hpp" />
     <ClInclude Include="MessageHeader.hpp" />
-    <ClInclude Include="Pointer.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

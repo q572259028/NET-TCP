@@ -207,7 +207,7 @@ public:
 
 	int recvData(ClientSocket* pClient)
 	{
-		//  接收客户端数据
+		//  接收客户端数据（设置缓冲空间进行加速）
 		char*  _szRecv = pClient->getMsgBuf() + pClient->getLastPos();
 		int nLen = (int)recv(pClient->getSock(), _szRecv, RECV_BUFF_SIZE * 5 - pClient->getLastPos(), 0);
 		_pNetEvent->onNetRecv(pClient);
@@ -558,6 +558,7 @@ public:
 	//	printf("New client joined：socket = %d,IP = %s \n", (int)cSock, inet_ntoa(clientAddr.sin_addr));
 		return cSock;
 	}
+	//找到客户端最少的线程并加入
 	void addClientToCellServer(ClientSocket* pClient)
 	{
 		//_clients.push_back(pClient);
@@ -703,8 +704,13 @@ public:
 	//	return SOCKET_ERROR;
 	//}
 	void Close()
-	{
+	{	
+		for (auto x : _cellServers)
+		{
+			delete x;
+		}
 		if (_sock == INVALID_SOCKET)return;
+
 		std::cout << "Server exit socket = " << _sock << std::endl;
 #ifdef _WIN32
 		closesocket(_sock);
